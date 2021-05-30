@@ -1,12 +1,15 @@
 #include<stdio.h>
- 
-void main(){
-   int n=12;
-   for(int i=1; i<n; i++){
-      n = n-1;
-      if(n==10){
-         ;
-      }
+
+char toLowercase(char s1[]){
+   for(int i=0; s1[i]!='\0'; i++){
+      if(s1[i]>'A' && s1[i]<'Z'){
+         s1[i] = s1[i] + ('a' - 'A');
+      } 
    }
-   printf("%d", n);
+}
+
+void main(){
+   char str[111] = "HELLO";
+   toLowercase(str);
+   printf("%s", str);
 }

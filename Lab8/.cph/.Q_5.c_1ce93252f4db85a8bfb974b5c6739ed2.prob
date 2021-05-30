@@ -1,0 +1,1 @@
+{"name":"Local: Q_5","url":"c:\\cygwin64\\home\\Dayal\\col100\\Lab8\\Q_5.c","tests":[{"id":1622367862966,"input":"the quick brown fox jumps over the lazy dog","output":"true"},{"id":1622367885799,"input":"helloworld","output":"false"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\cygwin64\\home\\Dayal\\col100\\Lab8\\Q_5.c","group":"local","local":true}
