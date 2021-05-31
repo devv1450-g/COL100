@@ -5,7 +5,7 @@
 void possiblePal(char str[]);
 
 void main(){
-   int str[MAX];
+   char str[MAX];
    scanf("%s",&str);
    possiblePal(str);
 }
@@ -16,8 +16,8 @@ void possiblePal(char str[]){
       int ct = 0;
       for(int i=0; i<len; i++){
          ct = 1;
-         for(int j=i; j<len; j++){
-            if(str[i]==str[j]){
+         for(int j=0; j<len; j++){
+            if(str[i]==str[j] && i!=j){
                ct++;
             }
          }
@@ -25,6 +25,32 @@ void possiblePal(char str[]){
             printf("NO\n");
             return;
          }
+         printf("YES\n");
+         return;
       }
+   }
+   else{
+      int count[len];
+      for(int i=0; i<len; i++){
+         count[i] = 1;
+         for(int j=0; j<len; j++){
+            if(str[i]==str[j] && i!=j){
+               count[i]++;
+            }
+         }
+      }
+      int ct_even = 0, ct_odd = 0;
+      for(int i=0; i<len; i++){
+         if(count[i]%2==0){
+            ct_even++;
+         }
+         else ct_odd++;
+      }
+      if(ct_even==len-1 && ct_odd==1){
+         printf("YES\n");
+         return;
+      }
+      printf("NO\n");
+      return;
    }
 }
